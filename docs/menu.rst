@@ -5,7 +5,7 @@ Menus
 
 | `See` :ref:`Menu Overview` `from the overview section.`
 
-.. currentmodule:: NodeGraphQt
+.. currentmodule:: NodeGraphPySide6
 
 **Classes:**
 

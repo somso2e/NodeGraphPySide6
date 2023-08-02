@@ -55,7 +55,7 @@ Connection pipes can be disconnected easily with the built in slice tool.
 
 Additional Info:
     To disable or enable the pipe slicer see
-    :meth:`NodeGraphQt.NodeGraph.set_pipe_slicing`
+    :meth:`NodeGraphPySide6.NodeGraph.set_pipe_slicing`
 
 
 Basic Setup
@@ -67,7 +67,7 @@ Here's a basic example snippet for creating two nodes and connecting them togeth
     :linenos:
 
     from Qt import QtWidgets
-    from NodeGraphQt import NodeGraph, BaseNode
+    from NodeGraphPySide6 import NodeGraph, BaseNode
 
 
     # create a node class object inherited from BaseNode.

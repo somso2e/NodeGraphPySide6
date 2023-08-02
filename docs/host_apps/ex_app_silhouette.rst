@@ -11,7 +11,7 @@ Creating a node graph widget in Silhouette FX.
 .. image:: ../_images/app_silhouette_example.png
         :width: 800px
 
-| Here is an example where the :attr:`NodeGraphQt.NodeGraph.widget` can be
+| Here is an example where the :attr:`NodeGraphPySide6.NodeGraph.widget` can be
  registered as a dockable panel in the application .
 
 .. code-block:: python
@@ -20,7 +20,7 @@ Creating a node graph widget in Silhouette FX.
     import fx
 
     from Qt import QtWidgets, QtCore
-    from NodeGraphQt import NodeGraph, BaseNode
+    from NodeGraphPySide6 import NodeGraph, BaseNode
 
 
     # create the widget wrapper that can be docked to the main window.

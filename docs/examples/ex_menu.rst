@@ -1,14 +1,14 @@
 Menu Overview
 #############
 
-.. currentmodule:: NodeGraphQt
+.. currentmodule:: NodeGraphPySide6
 
-| Examples for customizing context menus in ``NodeGraphQt``.
+| Examples for customizing context menus in ``NodeGraphPySide6``.
 
 Default Context Menu
 ********************
 
-The :class:`NodeGraphQt.NodeGraph` has a context menu can be accessed with
+The :class:`NodeGraphPySide6.NodeGraph` has a context menu can be accessed with
 :meth:`NodeGraph.context_menu`.
 
 
@@ -19,8 +19,8 @@ It can also be populated it with a config file in ``JSON`` format by using
     :width: 300px
 
 | Here's a couple links to the example config file and functions with a few essential menu commands.
-| `example JSON config file <https://github.com/jchanvfx/NodeGraphQt/blob/main/examples/hotkeys/hotkeys.json>`_
-| `example python hotkey functions <https://github.com/jchanvfx/NodeGraphQt/blob/main/examples/hotkeys/hotkey_functions.py>`_
+| `example JSON config file <https://github.com/jchanvfx/NodeGraphPySide6/blob/main/examples/hotkeys/hotkeys.json>`_
+| `example python hotkey functions <https://github.com/jchanvfx/NodeGraphPySide6/blob/main/examples/hotkeys/hotkey_functions.py>`_
 
 
 Adding to the Graph Menu
@@ -33,7 +33,7 @@ the registered ``my_test()`` function.
 .. code-block:: python
     :linenos:
 
-    from NodeGraphQt import NodeGraph
+    from NodeGraphPySide6 import NodeGraph
 
     # test function.
     def my_test(graph):
@@ -64,7 +64,7 @@ can override context menus on a per node type basis.
 .. code-block:: python
     :linenos:
 
-    from NodeGraphQt import BaseNode, NodeGraph, setup_context_menu
+    from NodeGraphPySide6 import BaseNode, NodeGraph, setup_context_menu
 
     # define a couple example nodes.
     class FooNode(BaseNode):
@@ -126,7 +126,7 @@ example python script containing a test function.
         function that's triggered on the node graph context menu.
 
         Args:
-            graph (NodeGraphQt.NodeGraph): node graph controller.
+            graph (NodeGraphPySide6.NodeGraph): node graph controller.
         """
         print(graph)
 
@@ -135,8 +135,8 @@ example python script containing a test function.
         function that's triggered on a node's node context menu.
 
         Args:
-            graph (NodeGraphQt.NodeGraph): node graph controller.
-            node: (NodeGraphQt.NodeObject): node object triggered on.
+            graph (NodeGraphPySide6.NodeGraph): node graph controller.
+            node: (NodeGraphPySide6.NodeObject): node object triggered on.
         """
         print(graph)
         print(node.name())
@@ -187,7 +187,7 @@ In the main code where your node graph controller is defined we can just call th
 .. code-block:: python
     :linenos:
 
-    from NodeGraphQt import NodeGraph
+    from NodeGraphPySide6 import NodeGraph
 
     node_graph = NodeGraph()
     node_graph.set_context_menu_from_file(
@@ -208,7 +208,7 @@ here's an example.
 .. code-block:: python
     :linenos:
 
-    from NodeGraphQt import NodeGraph
+    from NodeGraphPySide6 import NodeGraph
 
     data = [
         {

@@ -1,6 +1,6 @@
 Constants
 #########
 
-.. automodule:: NodeGraphQt.constants
+.. automodule:: NodeGraphPySide6.constants
     :members:
     :member-order: bysource

@@ -16,7 +16,7 @@ import os
 import sys
 from datetime import datetime
 
-# make NodeGraphQt module available.
+# make NodeGraphPySide6 module available.
 base_path = os.path.abspath('.')
 root_path = os.path.split(base_path)[0]
 sys.path.insert(0, root_path)
@@ -24,19 +24,19 @@ sys.path.insert(0, root_path)
 # required for the theme template.
 sys.path.insert(0, os.path.abspath('_themes'))
 
-import NodeGraphQt
+import NodeGraphPySide6
 from sphinxawesome_theme.postprocess import Icons
 
 # -- Project information -----------------------------------------------------
 
-project = 'NodeGraphQt'
-author = NodeGraphQt.pkg_info.__author__
+project = 'NodeGraphPySide6'
+author = NodeGraphPySide6.pkg_info.__author__
 copyright = '{}, {}'.format(datetime.now().year, author)
 
 # The full version, including alpha/beta/rc tags
-release = '{}'.format(NodeGraphQt.VERSION)
+release = '{}'.format(NodeGraphPySide6.VERSION)
 # The short X.Y version
-version = '{0}.{1}'.format(*NodeGraphQt.VERSION.split('.'))
+version = '{0}.{1}'.format(*NodeGraphPySide6.VERSION.split('.'))
 
 
 # -- General configuration ---------------------------------------------------
@@ -68,14 +68,14 @@ intersphinx_mapping = {
 
 # inheritance diagram remapping.
 inheritance_alias = {
-    'NodeGraphQt.base.graph.NodeGraph': 'NodeGraphQt.NodeGraph',
-    'NodeGraphQt.base.graph.SubGraph': 'NodeGraphQt.SubGraph',
-    'NodeGraphQt.base.node.NodeObject': 'NodeGraphQt.NodeObject',
-    'NodeGraphQt.base.port.Port': 'NodeGraphQt.Port',
-    'NodeGraphQt.nodes.backdrop_node.BackdropNode': 'NodeGraphQt.BackdropNode',
-    'NodeGraphQt.nodes.base_node.BaseNode': 'NodeGraphQt.BaseNode',
-    'NodeGraphQt.nodes.base_node_circle.BaseNodeCircle': 'NodeGraphQt.BaseNodeCircle',
-    'NodeGraphQt.nodes.group_node.GroupNode': 'NodeGraphQt.GroupNode',
+    'NodeGraphPySide6.base.graph.NodeGraph': 'NodeGraphPySide6.NodeGraph',
+    'NodeGraphPySide6.base.graph.SubGraph': 'NodeGraphPySide6.SubGraph',
+    'NodeGraphPySide6.base.node.NodeObject': 'NodeGraphPySide6.NodeObject',
+    'NodeGraphPySide6.base.port.Port': 'NodeGraphPySide6.Port',
+    'NodeGraphPySide6.nodes.backdrop_node.BackdropNode': 'NodeGraphPySide6.BackdropNode',
+    'NodeGraphPySide6.nodes.base_node.BaseNode': 'NodeGraphPySide6.BaseNode',
+    'NodeGraphPySide6.nodes.base_node_circle.BaseNodeCircle': 'NodeGraphPySide6.BaseNodeCircle',
+    'NodeGraphPySide6.nodes.group_node.GroupNode': 'NodeGraphPySide6.GroupNode',
 }
 
 # autodoc options.
@@ -144,7 +144,7 @@ html_show_sphinx = False
 html_context = {
     'display_github': True,
     'github_user': 'jchanvfx',
-    'github_repo': 'NodeGraphQt',
+    'github_repo': 'NodeGraphPySide6',
     'github_version': "main",
     'conf_py_path': '/docs/',
     'source_suffix': '.rst',
@@ -153,7 +153,7 @@ html_context = {
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_title = 'NodeGraphQt'
+html_title = 'NodeGraphPySide6'
 html_permalinks_icon = (
     '<svg xmlns="http://www.w3.org/2000/svg" '
     'height="1em" width="1em" viewBox="0 0 24 24"'
@@ -167,14 +167,14 @@ html_theme_options = {
     'logo_light': '_images/favicon.png',
     'logo_dark': '_images/favicon.png',
     # 'main_nav_links': {
-    #     'Releases': 'https://github.com/jchanvfx/NodeGraphQt/releases',
+    #     'Releases': 'https://github.com/jchanvfx/NodeGraphPySide6/releases',
     # },
     'show_scrolltop': True,
     'show_prev_next': True,
     'awesome_external_links': True,
     'extra_header_link_icons': {
         "GitHub Repository": {
-            "link": "https://github.com/jchanvfx/NodeGraphQt",
+            "link": "https://github.com/jchanvfx/NodeGraphPySide6",
             "icon": (
                 '<svg height="26px" style="margin-top:-2px;display:inline" '
                 'viewBox="0 0 45 44" '
@@ -201,7 +201,7 @@ html_theme_options = {
             ),
         },
         "PyPI Package": {
-            "link": "https://pypi.org/project/NodeGraphQt",
+            "link": "https://pypi.org/project/NodeGraphPySide6",
             "icon": (
                 '<svg width="28px" height="28px" viewBox="0 0 20 20" '
                 '<svg fill="currentColor" viewBox="0 0 24 24" '
@@ -258,7 +258,7 @@ htmlhelp_basename = 'NodeGraphQTdoc'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'nodegraphqt', 'NodeGraphQt Documentation',
+    (master_doc, 'nodegraphqt', 'NodeGraphPySide6 Documentation',
      [author], 1)
 ]
 
@@ -270,9 +270,9 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc,
-     'NodeGraphQt', 'NodeGraphQT Documentation',
+     'NodeGraphPySide6', 'NodeGraphQT Documentation',
      author,
-     'NodeGraphQt',
+     'NodeGraphPySide6',
      'Node graph framework that can be re-implemented into apps that supports PySide2.',
      'Miscellaneous'),
 ]

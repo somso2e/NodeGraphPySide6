@@ -3,9 +3,9 @@
 import os
 import signal
 
-from Qt import QtCore, QtWidgets
+from PySide6 import QtCore, QtWidgets
 
-from NodeGraphQt import (
+from NodeGraphPySide6 import (
     NodeGraph,
     PropertiesBinWidget,
     NodesTreeWidget,
@@ -20,7 +20,6 @@ if __name__ == '__main__':
     # handle SIGINT to make the app terminate on CTRL+C
     signal.signal(signal.SIGINT, signal.SIG_DFL)
 
-    QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
 
     app = QtWidgets.QApplication([])
 
@@ -28,7 +27,7 @@ if __name__ == '__main__':
     graph = NodeGraph()
 
     # set up context menu for the node graph.
-    graph.set_context_menu_from_file('../examples/hotkeys/hotkeys.json')
+    # graph.set_context_menu_from_file('/home/somso/work/misc/NodeGraphPySide6/hotkeys/hotkeys.json')
 
     # registered example nodes.
     graph.register_nodes([
@@ -108,7 +107,7 @@ if __name__ == '__main__':
     graph.clear_selection()
     graph.fit_to_selection()
 
-    # Custom builtin widgets from NodeGraphQt
+    # Custom builtin widgets from NodeGraphPySide6
     # ---------------------------------------
 
     # create a node properties bin widget.
@@ -141,4 +140,4 @@ if __name__ == '__main__':
     nodes_palette.set_category_label('nodes.group', 'Group Nodes')
     # nodes_palette.show()
 
-    app.exec_()
+    app.exec()

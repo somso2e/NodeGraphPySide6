@@ -4,7 +4,7 @@ Node Overview
 Creating Nodes
 **************
 
-| Creating a node is done by calling the :func:`NodeGraphQt.NodeGraph.create_node` function.
+| Creating a node is done by calling the :func:`NodeGraphPySide6.NodeGraph.create_node` function.
 | (`see example below` ``line: 23``)
 
 .. code-block:: python
@@ -12,7 +12,7 @@ Creating Nodes
     :emphasize-lines: 23
 
     from Qt import QtWidgets
-    from NodeGraphQt import BaseNode, NodeGraph
+    from NodeGraphPySide6 import BaseNode, NodeGraph
 
     class MyNode(BaseNode):
 
@@ -44,13 +44,13 @@ Creating Nodes
 Creating Node Widgets
 *********************
 
-The :class:`NodeGraphQt.BaseNode` class allows you to embed some basic widgets inside a node here's a
+The :class:`NodeGraphPySide6.BaseNode` class allows you to embed some basic widgets inside a node here's a
 example to simply embed a ``QComboBox`` widget when reimplementing the ``BaseNode``.
 
 .. code-block:: python
     :linenos:
 
-    from NodeGraphQt import BaseNode
+    from NodeGraphPySide6 import BaseNode
 
     class MyListNode(BaseNode):
 
@@ -64,7 +64,7 @@ example to simply embed a ``QComboBox`` widget when reimplementing the ``BaseNod
             self.add_combo_menu('my_list', 'My List', items)
 
 To you update the widget you can call the
-:meth:`NodeGraphQt.NodeObject.set_property` function.
+:meth:`NodeGraphPySide6.NodeObject.set_property` function.
 
 .. code-block:: python
     :linenos:
@@ -75,9 +75,9 @@ To you update the widget you can call the
 
 `functions for embedding widgets into a base node:`
 
- - ``QComboBox``: :meth:`NodeGraphQt.BaseNode.add_combo_menu`
- - ``QCheckBox``: :meth:`NodeGraphQt.BaseNode.add_checkbox`
- - ``QLineEdit``: :meth:`NodeGraphQt.BaseNode.add_text_input`
+ - ``QComboBox``: :meth:`NodeGraphPySide6.BaseNode.add_combo_menu`
+ - ``QCheckBox``: :meth:`NodeGraphPySide6.BaseNode.add_checkbox`
+ - ``QLineEdit``: :meth:`NodeGraphPySide6.BaseNode.add_text_input`
 
 See: :ref:`Node Widgets` for more node widget types.
 
@@ -87,15 +87,15 @@ Embedding Custom Widgets
 ************************
 
 Here's an example to embed a custom widget where we subclass the
-:class:`NodeGraphQt.NodeBaseWidget` and then add to the node with the
-:meth:`NodeGraphQt.BaseNode.add_custom_widget` function.
+:class:`NodeGraphPySide6.NodeBaseWidget` and then add to the node with the
+:meth:`NodeGraphPySide6.BaseNode.add_custom_widget` function.
 
 .. code-block:: python
     :linenos:
     :emphasize-lines: 38, 96, 97
 
     from Qt import QtCore, QtWidgets
-    from NodeGraphQt import BaseNode, NodeBaseWidget
+    from NodeGraphPySide6 import BaseNode, NodeBaseWidget
 
     class MyCustomWidget(QtWidgets.QWidget):
         """
@@ -193,8 +193,8 @@ Here's an example to embed a custom widget where we subclass the
             node_widget = NodeWidgetWrapper(self.view)
             self.add_custom_widget(node_widget, tab='Custom')
 
-To hide/show the embedded widget on a :class:`NodeGraphQt.BaseNode` checkout the
-:meth:`NodeGraphQt.BaseNode.hide_widget` and :meth:`NodeGraphQt.BaseNode.show_widget`
+To hide/show the embedded widget on a :class:`NodeGraphPySide6.BaseNode` checkout the
+:meth:`NodeGraphPySide6.BaseNode.hide_widget` and :meth:`NodeGraphPySide6.BaseNode.show_widget`
 functions.
 
 
@@ -228,14 +228,14 @@ connecting nodes with the port objects:
 
 `more on ports and connections.`
 
-        - :func:`NodeGraphQt.BaseNode.input`
-        - :func:`NodeGraphQt.BaseNode.output`
-        - :func:`NodeGraphQt.BaseNode.set_input`
-        - :func:`NodeGraphQt.BaseNode.set_output`
-        - :func:`NodeGraphQt.BaseNode.inputs`
-        - :func:`NodeGraphQt.BaseNode.outputs`
-        - :func:`NodeGraphQt.Port.connect_to`
-        - :func:`NodeGraphQt.Port.disconnect_from`
+        - :func:`NodeGraphPySide6.BaseNode.input`
+        - :func:`NodeGraphPySide6.BaseNode.output`
+        - :func:`NodeGraphPySide6.BaseNode.set_input`
+        - :func:`NodeGraphPySide6.BaseNode.set_output`
+        - :func:`NodeGraphPySide6.BaseNode.inputs`
+        - :func:`NodeGraphPySide6.BaseNode.outputs`
+        - :func:`NodeGraphPySide6.Port.connect_to`
+        - :func:`NodeGraphPySide6.Port.disconnect_from`
 
 |
 
@@ -249,7 +249,7 @@ Here's an example where we subclass the ``NodeGraph`` and connect it up to a
     :linenos:
 
     from Qt import QtCore, QtWidgets
-    from NodeGraphQt import BaseNode, NodeGraph, PropertiesBinWidget
+    from NodeGraphPySide6 import BaseNode, NodeGraph, PropertiesBinWidget
 
 
     class MyNode(BaseNode):
@@ -297,5 +297,5 @@ Here's an example where we subclass the ``NodeGraph`` and connect it up to a
 
 `more on the properties bin and node_double_clicked signal`
 
-    - :class:`NodeGraphQt.PropertiesBinWidget`
-    - :attr:`NodeGraphQt.NodeGraph.node_double_clicked`
+    - :class:`NodeGraphPySide6.PropertiesBinWidget`
+    - :attr:`NodeGraphPySide6.NodeGraph.node_double_clicked`

@@ -6,7 +6,7 @@ Creating a node graph widget in Nuke.
 .. image:: ../_images/app_nuke_example.png
         :width: 800px
 
-| Here is an example where the :attr:`NodeGraphQt.NodeGraph.widget` can be
+| Here is an example where the :attr:`NodeGraphPySide6.NodeGraph.widget` can be
  registered as a panel in the compositing application NUKE.
 
 .. code-block:: python
@@ -15,7 +15,7 @@ Creating a node graph widget in Nuke.
     from nukescripts import panels
 
     from Qt import QtWidgets, QtCore
-    from NodeGraphQt import NodeGraph, BaseNode
+    from NodeGraphPySide6 import NodeGraph, BaseNode
 
 
     # create a simple test node class.

@@ -1,5 +1,8 @@
 
-# NodeGraphQt
+# NodeGraphPySide6
+A fork of [NodeGraphQt](https://github.com/jchanvfx/NodeGraphQt) ported in to PySide6. 
+
+*I didn't test it throughly. Use with caution.*
 
 [![API Documentation](https://github.com/jchanvfx/NodeGraphQt/actions/workflows/sphinx_doc_build.yml/badge.svg)](https://github.com/jchanvfx/NodeGraphQt/actions/workflows/sphinx_doc_build.yml)
 [![PyPI Package](https://github.com/jchanvfx/NodeGraphQt/actions/workflows/pypi_publish.yml/badge.svg)](https://github.com/jchanvfx/NodeGraphQt/actions/workflows/pypi_publish.yml)
@@ -11,7 +14,7 @@
     </a>
 </p>
 
-NodeGraphQt is a node graph UI framework for `PySide2` that can be implemented and re-purposed into 
+NodeGraphQt is a node graph UI framework for `PySide6` that can be implemented and re-purposed into 
 applications.
 
 <img src="https://raw.githubusercontent.com/jchanvfx/NodeGraphQt/main/docs/_images/screenshot.png" width="100%" title="NodeGraphQt">

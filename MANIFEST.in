@@ -1,1 +1,1 @@
-include NodeGraphQt/widgets/icons/node_base.png
+include NodeGraphPySide6/widgets/icons/node_base.png

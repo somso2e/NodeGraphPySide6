@@ -6,8 +6,8 @@ Creating Custom Shapes
 
 | (*Implemented on* ``v0.1.1``)
 
-To have custom port shapes the :meth:`NodeGraphQt.BaseNode.add_input` and
-:meth:`NodeGraphQt.BaseNode.add_output` functions now have a ``painter_func``
+To have custom port shapes the :meth:`NodeGraphPySide6.BaseNode.add_input` and
+:meth:`NodeGraphPySide6.BaseNode.add_output` functions now have a ``painter_func``
 argument where you specify you custom port painter function.
 
 .. image:: ../_images/custom_ports.png
@@ -82,7 +82,7 @@ The ``draw_triangle_port`` painter function can then be passed to the ``painter_
     :linenos:
     :emphasize-lines: 8
 
-    from NodeGraphQt import BaseNode
+    from NodeGraphPySide6 import BaseNode
 
     class MyListNode(BaseNode):
 
@@ -148,13 +148,13 @@ Connection Constrains
 
 From version ``v0.6.0`` port object can now have pipe connection constraints the functions implemented are:
 
- - :meth:`NodeGraphQt.Port.add_accept_port_type`
- - :meth:`NodeGraphQt.Port.add_reject_port_type`
+ - :meth:`NodeGraphPySide6.Port.add_accept_port_type`
+ - :meth:`NodeGraphPySide6.Port.add_reject_port_type`
 
 this can also be set on the ``BaseNode`` level as well with:
 
- - :meth:`NodeGraphQt.BaseNode.add_accept_port_type`
- - :meth:`NodeGraphQt.BaseNode.add_accept_port_type`
+ - :meth:`NodeGraphPySide6.BaseNode.add_accept_port_type`
+ - :meth:`NodeGraphPySide6.BaseNode.add_accept_port_type`
 
 
 Here's an example snippet to add pipe connection constraints to a port.
@@ -162,8 +162,8 @@ Here's an example snippet to add pipe connection constraints to a port.
 .. code-block:: python
     :linenos:
 
-    from NodeGraphQt import BaseNode
-    from NodeGraphQt.constants import PortTypeEnum
+    from NodeGraphPySide6 import BaseNode
+    from NodeGraphPySide6.constants import PortTypeEnum
 
 
     class BasicNodeA(BaseNode):

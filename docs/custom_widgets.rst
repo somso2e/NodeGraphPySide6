@@ -3,32 +3,32 @@
 Built-in Widgets
 ################
 
-| The ``NodeGraphQt`` framework comes included with a few custom widgets.
+| The ``NodeGraphPySide6`` framework comes included with a few custom widgets.
 
 **Widget Types:**
 
 .. autosummary::
-    NodeGraphQt.PropertiesBinWidget
-    NodeGraphQt.NodesPaletteWidget
-    NodeGraphQt.NodesTreeWidget
+    NodeGraphPySide6.PropertiesBinWidget
+    NodeGraphPySide6.NodesPaletteWidget
+    NodeGraphPySide6.NodesTreeWidget
 
 Properties Bin
 **************
 
-.. autoclass:: NodeGraphQt.PropertiesBinWidget
+.. autoclass:: NodeGraphPySide6.PropertiesBinWidget
     :members:
     :exclude-members: staticMetaObject
 
 Nodes Palette
 *************
 
-.. autoclass:: NodeGraphQt.NodesPaletteWidget
+.. autoclass:: NodeGraphPySide6.NodesPaletteWidget
     :members:
     :exclude-members: mimeData, staticMetaObject
 
 Nodes Tree
 **********
 
-.. autoclass:: NodeGraphQt.NodesTreeWidget
+.. autoclass:: NodeGraphPySide6.NodesTreeWidget
     :members:
     :exclude-members: mimeData, staticMetaObject
