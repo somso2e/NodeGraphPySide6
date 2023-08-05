@@ -47,9 +47,9 @@ class NodesGridDelagate(QtWidgets.QStyledItemDelegate):
         pen.setCapStyle(QtCore.Qt.RoundCap)
         painter.setPen(pen)
         painter.setBrush(QtGui.QBrush(bg_color))
-        painter.drawRoundRect(base_rect,
-                              int(base_rect.height() / radius),
-                              int(base_rect.width() / radius))
+        painter.drawRoundedRect(base_rect,
+                                int(base_rect.height() / radius),
+                                int(base_rect.width() / radius))
 
         if option.state & QtWidgets.QStyle.State_Selected:
             pen_color = option.palette.highlight().color()
@@ -67,9 +67,9 @@ class NodesGridDelagate(QtWidgets.QStyledItemDelegate):
             base_rect.width() - (sub_margin * 2),
             base_rect.height() - (sub_margin * 2)
         )
-        painter.drawRoundRect(sub_rect,
-                              int(sub_rect.height() / radius),
-                              int(sub_rect.width() / radius))
+        painter.drawRoundedRect(sub_rect,
+                                int(sub_rect.height() / radius),
+                                int(sub_rect.width() / radius))
 
         painter.setBrush(QtGui.QBrush(pen_color))
         edge_size = 2, sub_rect.height() - 6
