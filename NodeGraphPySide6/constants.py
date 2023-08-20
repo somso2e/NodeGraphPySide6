@@ -92,9 +92,9 @@ class ViewerNavEnum(Enum):
     :py:mod:`NodeGraphPySide6.constants.ViewerNavEnum`
     """
     #: default background color.
-    BACKGROUND_COLOR = (25, 25, 25)
+    BACKGROUND_COLOR = (255, 255, 255)
     #: default item color.
-    ITEM_COLOR = (35, 35, 35)
+    ITEM_COLOR = (235, 35, 35)
 
 # ==================================== NODE ====================================
 
