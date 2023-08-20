@@ -139,12 +139,12 @@ class TabSearchMenuWidget(QtWidgets.QMenu):
             }
         }
         self._menu_stylesheet = ''
-        for css_class, css in style_dict.items():
-            style = '{} {{\n'.format(css_class)
-            for elm_name, elm_val in css.items():
-                style += '  {}:{};\n'.format(elm_name, elm_val)
-            style += '}\n'
-            self._menu_stylesheet += style
+        # for css_class, css in style_dict.items():
+        #     style = '{} {{\n'.format(css_class)
+        #     for elm_name, elm_val in css.items():
+        #         style += '  {}:{};\n'.format(elm_name, elm_val)
+        #     style += '}\n'
+        #     self._menu_stylesheet += style
         self.setStyleSheet(self._menu_stylesheet)
 
         self._actions = {}
@@ -223,7 +223,7 @@ class TabSearchMenuWidget(QtWidgets.QMenu):
     def _on_search_submitted(self):
         if not self._block_submit:
             action = self.sender()
-            if type(action) is not QtWidgets.QAction:
+            if type(action) is not QtGui.QAction:
                 if len(self._searched_actions) > 0:
                     action = self._searched_actions[0]
                 else:
@@ -263,7 +263,7 @@ class TabSearchMenuWidget(QtWidgets.QMenu):
 
                 max_depth = max(max_depth, depth)
 
-        for i in range(max_depth+1):
+        for i in range(max_depth + 1):
             menus = menu_tree[i]
             for menu_path, menu in menus.items():
                 self._menus[menu_path] = menu

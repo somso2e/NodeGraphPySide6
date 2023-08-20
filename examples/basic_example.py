@@ -12,6 +12,7 @@ from NodeGraphPySide6 import (
     NodesPaletteWidget
 )
 
+import pathlib
 # import example nodes from the "example_nodes" package
 from nodes import basic_nodes, custom_ports_node, group_node, widget_nodes
 
@@ -20,14 +21,14 @@ if __name__ == '__main__':
     # handle SIGINT to make the app terminate on CTRL+C
     signal.signal(signal.SIGINT, signal.SIG_DFL)
 
-
     app = QtWidgets.QApplication([])
 
     # create graph controller.
     graph = NodeGraph()
 
     # set up context menu for the node graph.
-    # graph.set_context_menu_from_file('/home/somso/work/misc/NodeGraphPySide6/hotkeys/hotkeys.json')
+    base = pathlib.Path(__file__).parents[0]
+    graph.set_context_menu_from_file(os.path.join(base, "./hotkeys/hotkeys.json"))
 
     # registered example nodes.
     graph.register_nodes([
@@ -116,10 +117,13 @@ if __name__ == '__main__':
 
     # example show the node properties bin widget when a node is double clicked.
     def display_properties_bin(node):
-        if not properties_bin.isVisible():
+        if isinstance(node, group_node.MyGroupNode):
+            node.expand()
+        elif not properties_bin.isVisible():
             properties_bin.show()
 
     # wire function to "node_double_clicked" signal.
+
     graph.node_double_clicked.connect(display_properties_bin)
 
     # create a nodes tree widget.
