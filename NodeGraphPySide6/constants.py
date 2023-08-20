@@ -73,7 +73,7 @@ class ViewerEnum(Enum):
     :py:mod:`NodeGraphPySide6.constants.ViewerEnum`
     """
     #: default background color for the node graph.
-    BACKGROUND_COLOR = (35, 35, 35)
+    BACKGROUND_COLOR = (255, 255, 255)
     #: style node graph background with no grid or dots.
     GRID_DISPLAY_NONE = 0
     #: style node graph background with dots.
@@ -83,7 +83,7 @@ class ViewerEnum(Enum):
     #: grid size when styled with grid lines.
     GRID_SIZE = 50
     #: grid line color.
-    GRID_COLOR = (45, 45, 45)
+    GRID_COLOR = (177, 177, 177)
 
 
 class ViewerNavEnum(Enum):
