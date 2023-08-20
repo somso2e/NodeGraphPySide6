@@ -84,7 +84,7 @@ class TabSearchLineEditWidget(QtWidgets.QLineEdit):
                 style += '  {}:{};\n'.format(elm_name, elm_val)
             style += '}\n'
             stylesheet += style
-        # self.setStyleSheet(stylesheet)
+        self.setStyleSheet(stylesheet)
 
     def keyPressEvent(self, event):
         super(TabSearchLineEditWidget, self).keyPressEvent(event)
