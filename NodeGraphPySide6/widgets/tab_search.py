@@ -61,30 +61,30 @@ class TabSearchLineEditWidget(QtWidgets.QLineEdit):
         text_color = tuple(map(lambda i, j: i - j, (255, 255, 255),
                                ViewerEnum.BACKGROUND_COLOR.value))
         selected_color = self.palette().highlight().color().getRgb()
-        # style_dict = {
-        #     'QLineEdit': {
-        #         'color': 'rgb({0},{1},{2})'.format(*text_color),
-        #         'border': '1px solid rgb({0},{1},{2})'.format(
-        #             *selected_color
-        #         ),
-        #         'border-radius': '3px',
-        #         'padding': '2px 4px',
-        #         'margin': '2px 4px 8px 4px',
-        #         'background': 'rgb({0},{1},{2})'.format(
-        #             *ViewerNavEnum.BACKGROUND_COLOR.value
-        #         ),
-        #         'selection-background-color': 'rgba({0},{1},{2},200)'
-        #                                       .format(*selected_color),
-        #     }
-        # }
+        style_dict = {
+            'QLineEdit': {
+                'color': 'rgb({0},{1},{2})'.format(*text_color),
+                'border': '1px solid rgb({0},{1},{2})'.format(
+                    *selected_color
+                ),
+                'border-radius': '3px',
+                'padding': '2px 4px',
+                'margin': '2px 4px 8px 4px',
+                'background': 'rgb({0},{1},{2})'.format(
+                    *ViewerNavEnum.BACKGROUND_COLOR.value
+                ),
+                'selection-background-color': 'rgba({0},{1},{2},200)'
+                                              .format(*selected_color),
+            }
+        }
         stylesheet = ''
-        # for css_class, css in style_dict.items():
-        #     style = '{} {{\n'.format(css_class)
-        #     for elm_name, elm_val in css.items():
-        #         style += '  {}:{};\n'.format(elm_name, elm_val)
-        #     style += '}\n'
-        #     stylesheet += style
-        self.setStyleSheet(stylesheet)
+        for css_class, css in style_dict.items():
+            style = '{} {{\n'.format(css_class)
+            for elm_name, elm_val in css.items():
+                style += '  {}:{};\n'.format(elm_name, elm_val)
+            style += '}\n'
+            stylesheet += style
+        # self.setStyleSheet(stylesheet)
 
     def keyPressEvent(self, event):
         super(TabSearchLineEditWidget, self).keyPressEvent(event)
