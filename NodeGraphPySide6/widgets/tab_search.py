@@ -139,12 +139,12 @@ class TabSearchMenuWidget(QtWidgets.QMenu):
             }
         }
         self._menu_stylesheet = ''
-        # for css_class, css in style_dict.items():
-        #     style = '{} {{\n'.format(css_class)
-        #     for elm_name, elm_val in css.items():
-        #         style += '  {}:{};\n'.format(elm_name, elm_val)
-        #     style += '}\n'
-        #     self._menu_stylesheet += style
+        for css_class, css in style_dict.items():
+            style = '{} {{\n'.format(css_class)
+            for elm_name, elm_val in css.items():
+                style += '  {}:{};\n'.format(elm_name, elm_val)
+            style += '}\n'
+            self._menu_stylesheet += style
         self.setStyleSheet(self._menu_stylesheet)
 
         self._actions = {}
