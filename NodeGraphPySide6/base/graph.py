@@ -10,9 +10,9 @@ from PySide6.QtWidgets import QVBoxLayout, QWidget, QUndoView, QApplication
 from PySide6.QtGui import QUndoStack
 
 from NodeGraphPySide6.base.commands import (NodeAddedCmd,
-                                       NodeRemovedCmd,
-                                       NodeMovedCmd,
-                                       PortConnectedCmd)
+                                            NodeRemovedCmd,
+                                            NodeMovedCmd,
+                                            PortConnectedCmd)
 from NodeGraphPySide6.base.factory import NodeFactory
 from NodeGraphPySide6.base.menu import NodeGraphMenu, NodesMenu
 from NodeGraphPySide6.base.model import NodeGraphModel
@@ -1701,7 +1701,9 @@ class NodeGraph(QObject):
             # update the node model.
             n.update_model()
 
-            node_dict = n.model.to_dict
+            # This is the only added part to the old method
+            node_dict = n.serialize()
+            # node_dict = n.model.to_dict
             nodes_data.update(node_dict)
 
         for n_id, n_data in nodes_data.items():
@@ -1794,6 +1796,11 @@ class NodeGraph(QObject):
                         'input_ports': n_data['input_ports'],
                         'output_ports': n_data['output_ports']
                     })
+
+                # This is the only added part to the old method
+                if n_data.get("ViSERA"):
+                    print(n_data.get("ViSERA"))
+                    node.parameters = n_data["ViSERA"]["parameters"]
 
         # build the connections.
         for connection in data.get('connections', []):
